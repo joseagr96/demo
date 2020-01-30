@@ -31,7 +31,7 @@ pipeline {
 	  
 		stage('QA') {
 			echo 'Analyzing the project with SonarQube Scanner'
-			mvn sonar:sonar -Dsonar.projectKey=demo -Dsonar.host.url=http://localhost:9000 -Dsonar.login=0aeaa3791eaf785e97f0409d0be0aa4724543acc
+			sh "mvn sonar:sonar -Dsonar.projectKey=demo -Dsonar.host.url=http://localhost:9000 -Dsonar.login=0aeaa3791eaf785e97f0409d0be0aa4724543acc"
 		}
    }
 }
